@@ -1,0 +1,386 @@
+
+@charset "UTF-8";
+
+/* 전체 메인 영역 */
+.main-container {
+    width: 90%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+/* 공통 섹션 라벨 */
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   1. 대표 뉴스 배너
+========================= */
+
+.main-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    min-height: 370px;
+    margin-top: 35px;
+    padding: 55px 65px;
+
+    border-radius: 20px;
+    background: linear-gradient(120deg, #f0eafe, #e3d8f8);
+    overflow: hidden;
+}
+
+.banner-content {
+    max-width: 600px;
+}
+
+.banner-category {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.banner-content h1 {
+    margin: 0 0 18px;
+    color: var(--primary-dark);
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+.banner-content p {
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.banner-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.banner-button:hover {
+    background: var(--primary-dark);
+}
+
+.banner-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+}
+
+.banner-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    height: 220px;
+    border: 2px solid rgba(91, 61, 150, 0.2);
+    border-radius: 50%;
+
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.55);
+    transform: rotate(-8deg);
+}
+
+.banner-circle span {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.banner-circle strong {
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+
+/* =========================
+   2. 사이트 소개
+========================= */
+
+.intro-section {
+    max-width: 750px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.intro-section h2 {
+    margin: 10px 0 20px;
+    color: var(--text);
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.intro-section p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   3. 주요 콘텐츠
+========================= */
+
+.content-section {
+    margin-bottom: 100px;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    font-size: 27px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: 390px;
+    padding: 32px;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: white;
+}
+
+.myth-card {
+    background: #faf8ff;
+}
+
+.prevention-card {
+    background: #f8faff;
+}
+
+.card-category {
+    margin-bottom: 18px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.content-card h3 {
+    margin: 0 0 15px;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.content-card > p {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.preview-question {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 17px;
+    border-radius: 10px;
+    background: white;
+}
+
+.preview-question span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.preview-question strong {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.preview-question button {
+    padding: 8px 13px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.answer-result {
+    margin: 13px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.preview-list {
+    margin: 0 0 25px;
+    padding-left: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: auto;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+
+/* =========================
+   4. 뉴스 및 전문가
+========================= */
+
+.quick-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-bottom: 100px;
+}
+
+.quick-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 280px;
+    padding: 32px;
+
+    border-radius: 16px;
+}
+
+.news-preview {
+    background: #f4f0fb;
+}
+
+.expert-preview {
+    background: #f0f5fa;
+}
+
+.quick-card h2 {
+    margin: 0 0 15px;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.quick-card p {
+    max-width: 350px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   반응형 디자인
+========================= */
+
+@media (max-width: 768px) {
+
+    .main-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 28px;
+    }
+
+    .banner-content h1 {
+        font-size: 28px;
+    }
+
+    .banner-visual {
+        align-self: center;
+        width: 180px;
+        height: 180px;
+    }
+
+    .banner-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .banner-circle span {
+        font-size: 18px;
+    }
+
+    .banner-circle strong {
+        font-size: 45px;
+    }
+
+    .intro-section {
+        margin: 70px auto;
+    }
+
+    .intro-section h2 {
+        font-size: 25px;
+    }
+
+    .content-grid,
+    .quick-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-banner {
+        padding: 30px 22px;
+    }
+
+    .banner-content h1 {
+        font-size: 25px;
+    }
+
+    .content-card,
+    .quick-card {
+        padding: 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+}

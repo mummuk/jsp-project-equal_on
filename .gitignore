@@ -1,0 +1,7 @@
+.metadata/
+bin/
+build/
+target/
+.settings/
+.DS_Store
+Thumbs.db

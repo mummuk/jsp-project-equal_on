@@ -1,0 +1,263 @@
+
+@charset "UTF-8";
+
+
+/* ==============================
+   기본 설정
+============================== */
+
+.education-page {
+    width: 100%;
+    color: var(--text);
+}
+
+.education-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* ==============================
+   페이지 소개 영역
+============================== */
+
+.education-intro {
+    padding: 75px 0;
+    background-color: var(--primary-light);
+}
+
+.education-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.education-intro h1 {
+    margin: 0 0 16px;
+
+    color: var(--primary-dark);
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.education-intro p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   교육 안내 영역
+============================== */
+
+.education-guide {
+    padding: 85px 0;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.section-heading > span {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    margin: 12px 0;
+
+    color: var(--text);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   교육 카드
+============================== */
+
+.education-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.education-card {
+    padding: 30px 25px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background-color: white;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 24px rgba(57, 38, 95, 0.09);
+}
+
+.education-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
+    margin-bottom: 25px;
+
+    border-radius: 14px;
+
+    background-color: var(--primary-light);
+    color: var(--primary);
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-category {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.education-card-content h3 {
+    margin: 12px 0;
+
+    color: var(--text);
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.education-card-content p {
+    min-height: 75px;
+    margin: 0 0 22px;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.education-card-link {
+    display: inline-block;
+
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.education-card-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   하단 메시지 영역
+============================== */
+
+.education-message {
+    padding: 65px 0;
+
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.education-message-content {
+    text-align: center;
+}
+
+.education-message-content > span {
+    color: #d7c8f5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.education-message-content h2 {
+    margin: 18px 0;
+
+    font-size: 27px;
+    line-height: 1.6;
+}
+
+.education-message-content p {
+    margin: 0;
+
+    color: #ded6eb;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   반응형
+============================== */
+
+@media (max-width: 900px) {
+
+    .education-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .education-intro {
+        padding: 50px 0;
+    }
+
+    .education-intro h1 {
+        font-size: 30px;
+    }
+
+    .education-guide {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .education-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card-content p {
+        min-height: auto;
+    }
+
+    .education-message {
+        padding: 50px 0;
+    }
+
+    .education-message-content h2 {
+        font-size: 22px;
+    }
+
+}

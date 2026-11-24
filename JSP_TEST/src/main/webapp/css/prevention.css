@@ -1,0 +1,404 @@
+
+@charset "UTF-8";
+
+/* ==============================
+   기본 설정
+============================== */
+
+.prevention-page {
+    width: 100%;
+    color: var(--text);
+}
+
+.prevention-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading > span {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    margin: 0 0 12px;
+
+    color: var(--primary-dark);
+    font-size: 27px;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   1. 페이지 소개
+============================== */
+
+.prevention-intro {
+    padding: 75px 0;
+    background-color: var(--primary-light);
+}
+
+.prevention-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.prevention-intro h1 {
+    margin: 0 0 18px;
+
+    color: var(--primary-dark);
+    font-size: 34px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.prevention-intro p {
+    max-width: 650px;
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   2. 기본 원칙
+============================== */
+
+.prevention-principles {
+    padding: 75px 0;
+    background-color: white;
+}
+
+.principle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.principle-card {
+    padding: 30px 25px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background-color: white;
+    transition: 0.2s;
+}
+
+.principle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(57, 38, 95, 0.08);
+}
+
+.principle-number {
+    margin-bottom: 22px;
+
+    color: var(--primary);
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.principle-card h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+.principle-card p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+
+/* ==============================
+   3. 일상 속 예방 수칙
+============================== */
+
+.prevention-daily {
+    padding: 75px 0;
+    background-color: #faf9fc;
+}
+
+.prevention-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prevention-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+
+    padding: 23px 25px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background-color: var(--primary-light);
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.prevention-item h3 {
+    margin: 2px 0 9px;
+    font-size: 17px;
+}
+
+.prevention-item p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   4. 디지털 성범죄 예방
+============================== */
+
+.prevention-digital {
+    padding: 75px 0;
+    background-color: white;
+}
+
+.digital-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.digital-card {
+    padding: 27px;
+
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+
+    background-color: #faf9fc;
+}
+
+.digital-card h3 {
+    margin: 0 0 13px;
+
+    color: var(--primary-dark);
+    font-size: 17px;
+}
+
+.digital-card p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   5. 위험 상황 대처
+============================== */
+
+.prevention-response {
+    padding: 75px 0;
+    background-color: #faf9fc;
+}
+
+.response-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.response-step {
+    padding: 28px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.step-number {
+    display: inline-block;
+    margin-bottom: 17px;
+
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.response-step h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.response-step p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   6. 도움 기관
+============================== */
+
+.prevention-help {
+    padding: 75px 0;
+    background-color: white;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.help-card {
+    padding: 27px 23px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.help-card h3 {
+    min-height: 25px;
+    margin: 0 0 15px;
+
+    color: var(--text);
+    font-size: 15px;
+}
+
+.help-card strong {
+    display: block;
+    margin-bottom: 15px;
+
+    color: var(--primary);
+    font-size: 27px;
+}
+
+.help-card p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+.help-caution {
+    margin: 20px 0 0;
+
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   반응형
+============================== */
+
+@media (max-width: 768px) {
+
+    .principle-grid,
+    .help-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .digital-grid,
+    .response-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .prevention-intro h1 {
+        font-size: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .prevention-container {
+        padding: 0 18px;
+    }
+
+    .prevention-intro {
+        padding: 55px 0;
+    }
+
+    .prevention-principles,
+    .prevention-daily,
+    .prevention-digital,
+    .prevention-response,
+    .prevention-help {
+        padding: 55px 0;
+    }
+
+    .principle-card,
+    .response-step {
+        padding: 23px 20px;
+    }
+
+    .prevention-item {
+        gap: 14px;
+        padding: 20px 16px;
+    }
+
+    .help-card {
+        padding: 23px 18px;
+    }
+
+}

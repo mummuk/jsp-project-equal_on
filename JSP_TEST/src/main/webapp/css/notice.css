@@ -1,0 +1,406 @@
+
+@charset "UTF-8";
+
+/* ==============================
+   공지사항 페이지 기본 설정
+============================== */
+
+.notice-page {
+    width: 100%;
+    min-height: 600px;
+    color: var(--text);
+}
+
+.notice-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* ==============================
+   페이지 소개 영역
+============================== */
+
+.notice-intro {
+    padding: 65px 0;
+    background-color: var(--primary-light);
+}
+
+.notice-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.notice-intro h1 {
+    margin: 0 0 12px;
+
+    color: var(--primary-dark);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.notice-intro p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   공지사항 목록 영역
+============================== */
+
+.notice-section {
+    padding: 60px 0 90px;
+}
+
+.notice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.notice-header h2 {
+    margin: 0;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.notice-count {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.notice-count strong {
+    color: var(--primary);
+}
+
+
+/* ==============================
+   검색 영역
+============================== */
+
+.notice-search {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.notice-search select,
+.notice-search input {
+    height: 42px;
+    padding: 0 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    background-color: white;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.notice-search input {
+    width: 240px;
+}
+
+.notice-search button {
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--primary);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.notice-search button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* ==============================
+   공지사항 테이블
+============================== */
+
+.notice-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    border-top: 2px solid var(--primary);
+}
+
+.notice-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.notice-table th,
+.notice-table td {
+    padding: 18px 12px;
+    border-bottom: 1px solid var(--border);
+
+    font-size: 14px;
+}
+
+.notice-table th {
+    background-color: #faf9fc;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.notice-number {
+    width: 100px;
+}
+
+.notice-date {
+    width: 140px;
+}
+
+.notice-views {
+    width: 100px;
+}
+
+.notice-empty {
+    height: 180px;
+    color: var(--muted);
+}
+
+
+/* ==============================
+   페이지네이션
+============================== */
+
+.notice-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 35px;
+}
+
+.notice-pagination button {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    background-color: white;
+    color: var(--text);
+
+    cursor: pointer;
+}
+
+.notice-pagination button.active {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: white;
+}
+
+.notice-pagination button:disabled {
+    color: #b8b2c1;
+    cursor: default;
+}
+
+
+/* ==============================
+   반응형
+============================== */
+
+@media (max-width: 600px) {
+
+    .notice-intro {
+        padding: 45px 0;
+    }
+
+    .notice-intro h1 {
+        font-size: 29px;
+    }
+
+    .notice-section {
+        padding: 40px 0 60px;
+    }
+
+    .notice-header h2 {
+        font-size: 20px;
+    }
+
+    .notice-search {
+        flex-wrap: wrap;
+    }
+
+    .notice-search select {
+        width: 90px;
+    }
+
+    .notice-search input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .notice-search button {
+        padding: 0 14px;
+    }
+
+    .notice-table th,
+    .notice-table td {
+        padding: 14px 8px;
+        font-size: 13px;
+    }
+
+    .notice-number,
+    .notice-views {
+        width: 60px;
+    }
+
+    .notice-date {
+        width: 90px;
+    }
+
+}
+
+/* ==============================
+   공지사항 상세 페이지
+============================== */
+
+.notice-detail {
+    border-top: 2px solid var(--primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.notice-detail-header {
+    padding: 28px 24px;
+
+    border-bottom: 1px solid var(--border);
+    background-color: #faf9fc;
+}
+
+.notice-detail-header h2 {
+    margin: 0 0 18px;
+
+    color: var(--text);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.notice-detail-info {
+    display: flex;
+    gap: 20px;
+
+    color: var(--muted);
+    font-size: 13px;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.notice-detail-content {
+    min-height: 250px;
+    padding: 30px 24px 40px;
+
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.9;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.notice-detail-actions {
+    display: flex;
+    justify-content: center;
+
+    padding: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.notice-list-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 120px;
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--primary);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.notice-list-button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* 게시글이 없는 경우 */
+
+.notice-not-found {
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.notice-not-found h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.notice-not-found p {
+    margin-bottom: 25px;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+@media (max-width: 600px) {
+
+    .notice-detail-header {
+        padding: 24px 16px;
+    }
+
+    .notice-detail-header h2 {
+        font-size: 19px;
+    }
+
+    .notice-detail-info {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .notice-detail-content {
+        padding: 30px 16px;
+    }
+
+}
+

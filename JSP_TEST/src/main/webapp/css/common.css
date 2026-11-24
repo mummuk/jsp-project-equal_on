@@ -1,0 +1,313 @@
+
+@charset "UTF-8";
+
+/* =========================
+   기본 설정
+========================= */
+
+:root {
+    --primary: #5b3d96;
+    --primary-dark: #39265f;
+    --primary-light: #f0eafe;
+
+    --text: #292338;
+    --muted: #746d82;
+
+    --border: #e8e2f0;
+    --background: #ffffff;
+
+    --content-width: 1120px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    color: var(--text);
+    background: var(--background);
+
+    font-family: "Noto Sans KR",
+                 "Malgun Gothic",
+                 sans-serif;
+
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    max-width: var(--content-width);
+    min-height: 82px;
+
+    margin: 0 auto;
+    padding: 14px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* 로고 */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 13px;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.35;
+}
+
+.brand-text strong {
+    color: var(--primary-dark);
+    font-size: 19px;
+}
+
+.brand-text small {
+    margin-top: 3px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* 메뉴 */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #50475f;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+
+/* 모바일 메뉴 버튼 */
+
+.menu-toggle {
+    display: none;
+
+    padding: 7px 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: white;
+    color: var(--primary-dark);
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+    margin-top: 72px;
+
+    background: var(--primary-dark);
+    color: #ffffff;
+}
+
+.footer-inner {
+    max-width: var(--content-width);
+
+    margin: 0 auto;
+    padding: 36px 24px;
+}
+
+
+/* Footer 로고 */
+
+.footer-brand strong {
+    font-size: 20px;
+}
+
+.footer-brand p {
+    margin: 5px 0 18px;
+
+    color: #ded5ef;
+}
+
+
+/* Footer 메뉴 */
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 18px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer 안내 문구 */
+
+.footer-note,
+.copyright {
+    color: #d4c9e7;
+    font-size: 12px;
+}
+
+.footer-note {
+    max-width: 720px;
+}
+
+
+/* =========================
+   반응형 디자인
+========================= */
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .main-nav.is-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 12px 4px;
+
+        border-top: 1px solid var(--border);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .header-inner {
+        padding: 12px 16px;
+    }
+
+    .footer-inner {
+        padding: 28px 18px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+}
+
+/* 헤더 검색창 */
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    flex-shrink: 0;
+}
+
+.header-search input {
+    width: 125px;
+    height: 36px;
+    padding: 0 7px;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.header-search button {
+    height: 36px;
+    padding: 0 12px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+

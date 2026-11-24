@@ -1,0 +1,407 @@
+
+@charset "UTF-8";
+
+/* ==============================
+   기본 설정
+============================== */
+
+.faq-page {
+    width: 100%;
+    color: var(--text);
+}
+
+.faq-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* ==============================
+   1. 페이지 소개
+============================== */
+
+.faq-intro {
+    padding: 70px 0;
+    background-color: var(--primary-light);
+}
+
+.faq-eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.faq-intro h1 {
+    margin: 0 0 16px;
+
+    color: var(--primary-dark);
+    font-size: 33px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.faq-intro p {
+    max-width: 650px;
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   2. FAQ 콘텐츠
+============================== */
+
+.faq-content {
+    padding: 75px 0 85px;
+    background-color: #faf9fc;
+}
+
+.faq-heading {
+    margin-bottom: 30px;
+}
+
+.faq-heading h2 {
+    margin: 0 0 10px;
+
+    color: var(--primary-dark);
+    font-size: 27px;
+}
+
+.faq-heading p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* 카테고리 */
+
+.faq-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.category-button {
+    padding: 11px 19px;
+
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    background-color: white;
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.category-button.active {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: white;
+}
+
+
+/* 질문 목록 */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+
+/* 질문 버튼 */
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    padding: 23px 25px;
+
+    border: none;
+    background-color: white;
+
+    color: var(--text);
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.faq-question:hover {
+    background-color: #faf8fd;
+}
+
+.question-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    line-height: 1.6;
+}
+
+.question-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 29px;
+    height: 29px;
+
+    border-radius: 50%;
+
+    background-color: var(--primary-light);
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.faq-arrow {
+    flex-shrink: 0;
+
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 400;
+
+    transition: transform 0.2s;
+}
+
+
+/* 펼쳐진 질문 */
+
+.faq-item.open .faq-question {
+    color: var(--primary-dark);
+}
+
+.faq-item.open .faq-arrow {
+    transform: rotate(45deg);
+}
+
+
+/* 답변 */
+
+.faq-answer {
+    padding: 0 25px 25px;
+    border-top: 1px solid #f0ecf4;
+}
+
+.answer-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding-top: 23px;
+}
+
+.answer-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 29px;
+    height: 29px;
+
+    border-radius: 50%;
+
+    background-color: var(--primary);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.answer-inner p {
+    margin: 0 0 12px;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    word-break: keep-all;
+}
+
+.answer-inner p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* 질문이 없는 경우 */
+
+#empty-message {
+    padding: 45px 0;
+
+    color: var(--muted);
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   3. 도움 안내
+============================== */
+
+.faq-help {
+    padding: 65px 0;
+
+    background-color: var(--primary-light);
+    text-align: center;
+}
+
+.faq-help h2 {
+    margin: 0 0 12px;
+
+    color: var(--primary-dark);
+    font-size: 26px;
+}
+
+.faq-help > .faq-container > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.faq-help-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.faq-help-card {
+    padding: 25px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.faq-help-card h3 {
+    margin: 0 0 13px;
+    font-size: 15px;
+}
+
+.faq-help-card strong {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--primary);
+    font-size: 29px;
+}
+
+.faq-help-card p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.faq-help-notice {
+    margin-top: 25px;
+
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   반응형
+============================== */
+
+@media (max-width: 600px) {
+
+    .faq-container {
+        padding: 0 18px;
+    }
+
+    .faq-intro {
+        padding: 50px 0;
+    }
+
+    .faq-intro h1 {
+        font-size: 26px;
+    }
+
+    .faq-content {
+        padding: 50px 0 60px;
+    }
+
+    .faq-heading h2 {
+        font-size: 23px;
+    }
+
+    .faq-categories {
+        gap: 8px;
+    }
+
+    .category-button {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .faq-question {
+        padding: 19px 16px;
+        font-size: 14px;
+    }
+
+    .question-text {
+        gap: 10px;
+    }
+
+    .faq-answer {
+        padding: 0 16px 20px;
+    }
+
+    .answer-inner {
+        gap: 10px;
+    }
+
+    .answer-inner p {
+        font-size: 13px;
+    }
+
+    .faq-help-cards {
+        grid-template-columns: 1fr;
+    }
+
+}

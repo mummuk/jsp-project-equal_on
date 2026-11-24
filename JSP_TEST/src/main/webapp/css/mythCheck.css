@@ -1,0 +1,358 @@
+
+@charset "UTF-8";
+
+/* ==============================
+   기본 설정
+============================== */
+
+.myth-page {
+    width: 100%;
+    color: var(--text);
+}
+
+.myth-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* ==============================
+   페이지 소개
+============================== */
+
+.myth-intro {
+    padding: 65px 0;
+    background-color: var(--primary-light);
+}
+
+.myth-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.myth-intro h1 {
+    margin: 0 0 14px;
+
+    color: var(--primary-dark);
+    font-size: 36px;
+}
+
+.myth-intro p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   퀴즈 영역
+============================== */
+
+.myth-quiz-section {
+    padding: 70px 0 85px;
+    background-color: #faf9fc;
+}
+
+.myth-quiz-card {
+    max-width: 760px;
+    min-height: 430px;
+    margin: 0 auto;
+    padding: 40px;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background-color: white;
+    box-shadow: 0 8px 28px rgba(57, 38, 95, 0.05);
+}
+
+
+/* 진행 상황 */
+
+.myth-progress-area {
+    margin-bottom: 40px;
+}
+
+.myth-progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#question-number {
+    color: var(--primary);
+}
+
+.myth-progress-bar {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+    border-radius: 10px;
+
+    background-color: #eeeaf4;
+}
+
+#progress-fill {
+    width: 20%;
+    height: 100%;
+
+    border-radius: 10px;
+    background-color: var(--primary);
+
+    transition: width 0.3s ease;
+}
+
+
+/* 문제 */
+
+.myth-category {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#question-text {
+    min-height: 90px;
+    margin: 0;
+
+    color: var(--text);
+    font-size: 23px;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.myth-instruction {
+    margin: 15px 0 30px;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* O / X 버튼 */
+
+.myth-answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.answer-button {
+    width: 100px;
+    height: 100px;
+
+    border: 2px solid var(--border);
+    border-radius: 50%;
+
+    background-color: white;
+
+    font-size: 35px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-o {
+    color: var(--primary);
+}
+
+.answer-x {
+    color: #d65b65;
+}
+
+.answer-button:hover:not(:disabled) {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+    transform: translateY(-3px);
+}
+
+.answer-button:disabled {
+    cursor: default;
+    opacity: 0.55;
+}
+
+.answer-button.selected {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+    opacity: 1;
+}
+
+
+/* 정답 및 해설 */
+
+.myth-feedback {
+    margin: 25px 0;
+    padding: 22px;
+
+    border-radius: 9px;
+    background-color: #f5f2fa;
+}
+
+.myth-feedback h3 {
+    margin: 0 0 10px;
+
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.myth-feedback p {
+    margin: 0;
+
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* 다음 문제 */
+
+.myth-next-area {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#next-button,
+#restart-button {
+    min-width: 125px;
+    padding: 13px 22px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: var(--primary);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+#next-button:hover:not(:disabled),
+#restart-button:hover {
+    background-color: var(--primary-dark);
+}
+
+#next-button:disabled {
+    background-color: #c9c2d5;
+    cursor: default;
+}
+
+
+/* ==============================
+   결과 영역
+============================== */
+
+#result-area {
+    padding: 35px 0;
+    text-align: center;
+}
+
+#result-area h2 {
+    margin: 10px 0;
+	
+    font-size: 27px;
+}
+
+.myth-result-description {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.myth-score {
+    margin: 30px 0;
+
+    color: var(--primary);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.myth-score span:last-child {
+    color: var(--muted);
+    font-size: 25px;
+}
+
+#result-message {
+    margin-bottom: 30px;
+
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   하단 안내
+============================== */
+
+.myth-notice {
+    padding: 25px 0;
+
+    background-color: var(--primary-light);
+    text-align: center;
+}
+
+.myth-notice p {
+    margin: 0;
+
+    color: var(--primary-dark);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   반응형
+============================== */
+
+@media (max-width: 600px) {
+
+    .myth-intro {
+        padding: 45px 0;
+    }
+
+    .myth-intro h1 {
+        font-size: 29px;
+    }
+
+    .myth-quiz-section {
+        padding: 40px 0 60px;
+    }
+
+    .myth-quiz-card {
+        padding: 25px 18px;
+    }
+
+    #question-text {
+        min-height: auto;
+        font-size: 19px;
+    }
+
+    .answer-button {
+        width: 80px;
+        height: 80px;
+        font-size: 29px;
+    }
+
+}
