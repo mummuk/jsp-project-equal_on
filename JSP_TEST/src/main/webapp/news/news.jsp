@@ -14,7 +14,9 @@
           href="${pageContext.request.contextPath}/css/common.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/css/news.css">
-
+	<script>
+	    const contextPath = "${pageContext.request.contextPath}";
+	</script>
     <script src="${pageContext.request.contextPath}/js/news.js" defer></script>
 </head>
 <body>

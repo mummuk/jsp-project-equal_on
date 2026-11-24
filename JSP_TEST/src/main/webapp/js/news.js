@@ -1,68 +1,96 @@
 
 /* =========================
    뉴스 데이터
-   DB 대신 JavaScript 배열 사용
+   JavaScript 배열 사용
 ========================= */
+
+const categoryImages = {
+    "정책": "news_policy.png",
+    "디지털 성범죄": "news_digital_crime.png",
+    "사회": "news_society.png",
+    "교육": "news_education.png"
+};
 
 const newsList = [
     {
         id: 1,
-		title: "실제 기사 제목",
-		category: "정책",
-		date: "2026-11-24",
-		summary: "기사의 핵심 내용을 요약합니다.",
-		url: "https://실제-기사-주소"
-
+        title: "디지털성범죄 피해 78%는 10·20대…딥페이크 '합성·편집' 심각",
+        category: "디지털 성범죄",
+        date: "2026-04-16",
+        summary: "작년 피해자 1만637명…영상·사진 '유포 불안' 피해 가장 커",
+        url: "https://www.yna.co.kr/view/AKR20260416072900530"
     },
     {
         id: 2,
-        title: "디지털 성범죄 예방을 위한 사회적 노력",
+        title: "디지털 성범죄 10년새 4배로…징역형 비율도 급증",
         category: "디지털 성범죄",
-        date: "2026-11-18",
-        summary: "디지털 환경에서 발생하는 성범죄와 예방 방법을 알아봅니다.",
-        content: `디지털 기술의 발전과 함께 불법 촬영물의 유포 및 유통 등 다양한 디지털 성범죄 문제가 발생하고 있습니다.
-
-개인의 주의뿐만 아니라 사회적 대응 체계와 피해자 지원 역시 중요합니다.`
+        date: "2026-05-12",
+        summary: "온라인서 알게 된 가해자 피해 38%…채팅앱·오픈채팅이 주 접촉경로",
+        url: "https://www.yna.co.kr/view/AKR20260512121100530"
     },
     {
         id: 3,
-        title: "일상 속 성차별 문제와 인식 개선",
-        category: "사회",
-        date: "2026-11-15",
-        summary: "일상에서 무심코 지나칠 수 있는 성차별 문제를 생각해 봅니다.",
-        content: `성차별은 거창한 사회적 문제뿐만 아니라 일상적인 언어와 행동에서도 나타날 수 있습니다.
-
-서로의 차이를 존중하고 편견을 돌아보는 태도가 필요합니다.`
+        title: "헤어진 뒤 딥페이크 협박…전 연인 협박 수단 된 AI 성범죄",
+        category: "디지털 성범죄",
+        date: "2026-07-08",
+        summary: "피해 여성 42.5%가 전 연인으로부터 피해를 입은 사례를 다룹니다.",
+        url: "https://www.seoul.co.kr/news/society/2026/07/08/20260708500257"
     },
     {
         id: 4,
-        title: "학교 현장의 성평등 교육 확대",
-        category: "교육",
-        date: "2026-11-12",
-        summary: "교육 현장에서 성평등 교육이 갖는 의미를 살펴봅니다.",
-        content: `성평등 교육은 서로의 권리와 경계를 이해하고 존중하는 태도를 형성하는 데 도움을 줍니다.
-
-학교와 지역사회가 함께 지속적인 교육 환경을 만들어 가는 것이 중요합니다.`
+        title: "법무부, 양성평등 5개년 추진계획 수립…성희롱·성폭력 근절",
+        category: "정책",
+        date: "2026-05-12",
+        summary: "여성폭력방지정책 기본계획 2026년 시행계획 심의·확정",
+        url: "https://www.mogef.go.kr/nw/enw/nw_enw_s001d.do?bbtSn=713770"
     },
     {
         id: 5,
-        title: "피해자 보호와 지원 제도의 중요성",
+        title: "디지털성범죄 근절 방안은…성평등부·권익위, 국민 의견 수렴",
         category: "정책",
-        date: "2026-11-10",
-        summary: "피해자가 안전하게 일상을 회복할 수 있도록 지원하는 제도를 알아봅니다.",
-        content: `피해자 지원은 단순한 사건 처리를 넘어 안전 확보와 심리적 회복, 일상 복귀까지 고려해야 합니다.
-
-피해자의 의사와 권리를 존중하는 지원 체계가 중요합니다.`
+        date: "2026-09-18",
+        summary: "디지털 성범죄 근절을 위한 국민 의견 수렴과 불법 사이트 제보 창구 운영",
+        url: "https://www.yna.co.kr/view/AKR20260917178800530"
     },
     {
         id: 6,
-        title: "온라인 공간의 올바른 디지털 시민의식",
-        category: "디지털 성범죄",
-        date: "2026-11-08",
-        summary: "온라인 공간에서 타인의 권리를 존중하는 방법을 알아봅니다.",
-        content: `온라인에서도 타인의 초상과 개인정보, 사생활을 존중해야 합니다.
-
-동의 없는 촬영물이나 개인정보를 공유하지 않고, 불법 콘텐츠를 발견했을 때는 유포하지 않고 신고하는 태도가 필요합니다.`
+        title: "초등생 유인해 성범죄 10대, 징역 6년 선고받자 법정서 소란",
+        category: "사회",
+        date: "2026-06-12",
+        summary: "SNS를 통해 아동을 유인한 성범죄 사건의 재판 결과를 다룹니다.",
+        url: "https://www.yna.co.kr/view/AKR20260612103000051"
+    },
+    {
+        id: 7,
+        title: "전자발찌 찬 상태로 지인 딸 추행한 50대 항소심도 실형",
+        category: "사회",
+        date: "2026-08-28",
+        summary: "아동 대상 성범죄 사건의 항소심 판결과 법원의 보호 명령을 다룹니다.",
+        url: "https://www.yna.co.kr/view/AKR20260828123700064"
+    },
+    {
+        id: 8,
+        title: "'피해자 진술'이 유일증거인 성범죄 사건, 2심 무죄 판결 배경은",
+        category: "사회",
+        date: "2026-06-28",
+        summary: "성인화보사 전 대표의 모델 성폭행 혐의와 1심·2심 판결을 다룹니다.",
+        url: "https://www.yna.co.kr/view/AKR20260626093800065"
+    },
+    {
+        id: 9,
+        title: "울산교육청, 초·중학생 대상 찾아가는 성교육 운영",
+        category: "교육",
+        date: "2026-03-26",
+        summary: "초등학교와 중학교 학생을 대상으로 동의, 상호 존중, 성폭력 및 디지털 성범죄 예방 교육을 운영합니다.",
+        url: "https://www.yna.co.kr/view/AKR20260326158800057"
+    },
+    {
+        id: 10,
+        title: "성평등부·교육부, 대학 폭력예방교육 현장점검…참여율 제고 나서",
+        category: "교육",
+        date: "2026-05-13",
+        summary: "대학 폭력예방교육 실적 점검과 교육 참여율을 높이기 위한 관리 강화 방안을 다룹니다.",
+        url: "https://www.newspim.com/news/view/20260512000935"
     }
 ];
 
@@ -77,19 +105,8 @@ const newsSearch = document.getElementById("newsSearch");
 const searchButton = document.getElementById("searchButton");
 const sortSelect = document.getElementById("sortSelect");
 const categoryButtons = document.querySelectorAll(".category-button");
-
 const newsEmpty = document.getElementById("newsEmpty");
 const resetButton = document.getElementById("resetButton");
-
-const newsModal = document.getElementById("newsModal");
-const modalOverlay = document.getElementById("modalOverlay");
-const modalClose = document.getElementById("modalClose");
-const modalConfirm = document.getElementById("modalConfirm");
-
-const modalCategory = document.getElementById("modalCategory");
-const modalTitle = document.getElementById("modalTitle");
-const modalDate = document.getElementById("modalDate");
-const modalBody = document.getElementById("modalBody");
 
 
 /* =========================
@@ -98,7 +115,6 @@ const modalBody = document.getElementById("modalBody");
 
 let selectedCategory = "전체";
 let searchKeyword = "";
-let previousFocus = null;
 
 
 /* =========================
@@ -123,10 +139,13 @@ function renderNews() {
 
     // 정렬
     if (sortSelect.value === "latest") {
+
         filteredNews.sort((a, b) =>
             new Date(b.date) - new Date(a.date)
         );
+
     } else {
+
         filteredNews.sort((a, b) =>
             new Date(a.date) - new Date(b.date)
         );
@@ -142,6 +161,7 @@ function renderNews() {
 
     // 검색 결과가 없는 경우
     if (filteredNews.length === 0) {
+
         newsEmpty.hidden = false;
         return;
     }
@@ -152,46 +172,57 @@ function renderNews() {
     // 뉴스 카드 생성
     filteredNews.forEach(news => {
 
+        // 뉴스 카드 전체를 링크로 생성
         const card = document.createElement("a");
 
         card.className = "news-card";
-		card.href = news.url;
-		card.target = "_blank";
-		card.rel = "noopener noreferrer";
+        card.href = news.url;
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
 
-        // 카테고리별 이미지 영역 스타일
-        let imageClass = "";
 
-        if (news.category === "사회") {
-            imageClass = "category-social";
-        } else if (news.category === "디지털 성범죄") {
-            imageClass = "category-digital";
-        } else if (news.category === "교육") {
-            imageClass = "category-education";
-        }
+        // 카테고리별 이미지 생성
+        const image = document.createElement("img");
 
-        const image = document.createElement("div");
-        image.className = "news-card-image " + imageClass;
-        image.textContent = news.category;
+        image.src = `${contextPath}/images/news/${categoryImages[news.category]}`;
+        image.alt = `${news.category} 관련 이미지`;
+        image.className = "news-thumbnail";
 
+
+        // 카드 내용 영역
         const content = document.createElement("div");
+
         content.className = "news-card-content";
 
+
+        // 카테고리
         const category = document.createElement("span");
+
         category.className = "news-card-category";
         category.textContent = news.category;
 
+
+        // 제목
         const title = document.createElement("h3");
+
         title.textContent = news.title;
 
+
+        // 요약
         const summary = document.createElement("p");
+
         summary.className = "news-card-summary";
         summary.textContent = news.summary;
 
+
+        // 날짜
         const date = document.createElement("span");
+
         date.className = "news-card-date";
         date.textContent = news.date.replaceAll("-", ".");
 
+
+        // 요소 결합
         content.appendChild(category);
         content.appendChild(title);
         content.appendChild(summary);
@@ -201,7 +232,9 @@ function renderNews() {
         card.appendChild(content);
 
         newsGrid.appendChild(card);
+
     });
+
 }
 
 
@@ -225,6 +258,7 @@ categoryButtons.forEach(button => {
         selectedCategory = button.dataset.category;
 
         renderNews();
+
     });
 
 });
@@ -239,6 +273,7 @@ function searchNews() {
     searchKeyword = newsSearch.value.trim();
 
     renderNews();
+
 }
 
 searchButton.addEventListener("click", searchNews);
@@ -257,94 +292,6 @@ newsSearch.addEventListener("keydown", event => {
 ========================= */
 
 sortSelect.addEventListener("change", renderNews);
-
-
-/* =========================
-   상세 모달 열기
-========================= */
-
-function openModal(newsId) {
-
-    const news = newsList.find(item => item.id === newsId);
-
-    if (!news) {
-        return;
-    }
-
-    previousFocus = document.activeElement;
-
-    modalCategory.textContent = news.category;
-    modalTitle.textContent = news.title;
-    modalDate.textContent = news.date.replaceAll("-", ".");
-    modalBody.textContent = news.content;
-
-    newsModal.hidden = false;
-    document.body.style.overflow = "hidden";
-
-    modalClose.focus();
-}
-
-
-/* =========================
-   상세 모달 닫기
-========================= */
-
-function closeModal() {
-
-    newsModal.hidden = true;
-    document.body.style.overflow = "";
-
-    if (previousFocus) {
-        previousFocus.focus();
-    }
-}
-
-
-// 뉴스 카드 클릭
-newsGrid.addEventListener("click", event => {
-
-    const card = event.target.closest(".news-card");
-
-    if (!card) {
-        return;
-    }
-
-    openModal(Number(card.dataset.id));
-});
-
-
-// 키보드 Enter / Space로 상세 보기
-newsGrid.addEventListener("keydown", event => {
-
-    if (event.key !== "Enter" && event.key !== " ") {
-        return;
-    }
-
-    const card = event.target.closest(".news-card");
-
-    if (!card) {
-        return;
-    }
-
-    event.preventDefault();
-    openModal(Number(card.dataset.id));
-});
-
-
-// 모달 닫기 버튼
-modalClose.addEventListener("click", closeModal);
-modalConfirm.addEventListener("click", closeModal);
-modalOverlay.addEventListener("click", closeModal);
-
-
-// ESC 키로 닫기
-document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape" && !newsModal.hidden) {
-        closeModal();
-    }
-
-});
 
 
 /* =========================
@@ -369,6 +316,7 @@ resetButton.addEventListener("click", () => {
     });
 
     renderNews();
+
 });
 
 
